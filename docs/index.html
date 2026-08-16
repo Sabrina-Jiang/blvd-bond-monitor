@@ -24,9 +24,10 @@
 
     <div class="card filters">
       <div class="filter-row">
-        <label>Bedrooms
-          <select id="f-bedrooms"><option value="">All</option></select>
-        </label>
+        <div class="filter-group">
+          <span class="filter-group-label">Bedrooms</span>
+          <div id="f-bedrooms" class="checkbox-group"></div>
+        </div>
         <label>Building
           <select id="f-building"><option value="">All</option></select>
         </label>
@@ -55,6 +56,7 @@
           <th>Type</th>
           <th>Sqft</th>
           <th>Price</th>
+          <th>Recent change</th>
           <th>Available</th>
           <th>Days listed</th>
           <th></th>
@@ -66,9 +68,13 @@
   <script src="chart.js"></script>
   <script>
     const FAV_KEY = 'bbm_favorites';
+    const FILTER_KEY = 'bbm_filters';
+    const DEFAULT_BEDROOMS = ['1BR', '2BR'];
+
     const fmtPrice = (p) => (p != null ? '$' + Number(p).toLocaleString() : '—');
     const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const daysListed = (firstSeenAt) => firstSeenAt ? Math.max(0, Math.floor((Date.now() - new Date(firstSeenAt).getTime()) / 86400000)) : null;
+    const daysAgo = (iso) => Math.floor((Date.now() - new Date(iso).getTime()) / 86400000);
 
     function loadFavorites() {
       try { return new Set(JSON.parse(localStorage.getItem(FAV_KEY)) || []); } catch { return new Set(); }
@@ -78,32 +84,83 @@
     }
     let favorites = loadFavorites();
 
+    function loadFilterState() {
+      try { return JSON.parse(localStorage.getItem(FILTER_KEY)) || null; } catch { return null; }
+    }
+    function saveFilterState(state) {
+      localStorage.setItem(FILTER_KEY, JSON.stringify(state));
+    }
+
     let allUnits = [];
+    let recentChangeByUnit = new Map();
+
+    const BEDROOM_ORDER = ['Studio', '1BR', '2BR', '3BR', '4BR'];
 
     function populateFilterOptions(units) {
-      const bedrooms = [...new Set(units.map((u) => u.bedrooms).filter(Boolean))].sort();
+      const present = new Set(units.map((u) => u.bedrooms).filter(Boolean));
+      const ordered = BEDROOM_ORDER.filter((b) => present.has(b))
+        .concat([...present].filter((b) => !BEDROOM_ORDER.includes(b)).sort());
+
+      const saved = loadFilterState();
+      const checkedSet = new Set(
+        saved && Array.isArray(saved.bedrooms)
+          ? saved.bedrooms
+          : DEFAULT_BEDROOMS.filter((b) => present.has(b)).length
+            ? DEFAULT_BEDROOMS
+            : ordered
+      );
+
+      const group = document.getElementById('f-bedrooms');
+      group.innerHTML = ordered.map((b) => `
+        <label class="checkbox-label">
+          <input type="checkbox" class="f-bedroom-cb" value="${esc(b)}" ${checkedSet.has(b) ? 'checked' : ''}> ${esc(b)}
+        </label>`).join('');
+
       const buildings = [...new Set(units.map((u) => u.address).filter(Boolean))].sort();
-      const bedroomSel = document.getElementById('f-bedrooms');
       const buildingSel = document.getElementById('f-building');
-      bedrooms.forEach((b) => bedroomSel.insertAdjacentHTML('beforeend', `<option value="${esc(b)}">${esc(b)}</option>`));
       buildings.forEach((b) => buildingSel.insertAdjacentHTML('beforeend', `<option value="${esc(b)}">${esc(b)}</option>`));
+
+      if (saved) {
+        buildingSel.value = saved.building || '';
+        document.getElementById('f-min-price').value = saved.minPrice ?? '';
+        document.getElementById('f-max-price').value = saved.maxPrice ?? '';
+        document.getElementById('f-min-sqft').value = saved.minSqft ?? '';
+        document.getElementById('f-favorites-only').checked = !!saved.favoritesOnly;
+      }
+
+      group.querySelectorAll('.f-bedroom-cb').forEach((cb) => {
+        cb.addEventListener('change', applyFilters);
+      });
+    }
+
+    function currentFilterState() {
+      const bedrooms = [...document.querySelectorAll('.f-bedroom-cb:checked')].map((cb) => cb.value);
+      return {
+        bedrooms,
+        building: document.getElementById('f-building').value,
+        minPrice: document.getElementById('f-min-price').value,
+        maxPrice: document.getElementById('f-max-price').value,
+        minSqft: document.getElementById('f-min-sqft').value,
+        favoritesOnly: document.getElementById('f-favorites-only').checked,
+      };
     }
 
     function applyFilters() {
-      const bedrooms = document.getElementById('f-bedrooms').value;
-      const building = document.getElementById('f-building').value;
-      const minPrice = parseFloat(document.getElementById('f-min-price').value);
-      const maxPrice = parseFloat(document.getElementById('f-max-price').value);
-      const minSqft = parseFloat(document.getElementById('f-min-sqft').value);
-      const favoritesOnly = document.getElementById('f-favorites-only').checked;
+      const state = currentFilterState();
+      saveFilterState(state);
+
+      const bedroomSet = new Set(state.bedrooms);
+      const minPrice = parseFloat(state.minPrice);
+      const maxPrice = parseFloat(state.maxPrice);
+      const minSqft = parseFloat(state.minSqft);
 
       const filtered = allUnits.filter((u) => {
-        if (bedrooms && u.bedrooms !== bedrooms) return false;
-        if (building && u.address !== building) return false;
+        if (bedroomSet.size && !bedroomSet.has(u.bedrooms)) return false;
+        if (state.building && u.address !== state.building) return false;
         if (!isNaN(minPrice) && (u.price == null || u.price < minPrice)) return false;
         if (!isNaN(maxPrice) && (u.price == null || u.price > maxPrice)) return false;
         if (!isNaN(minSqft) && (u.sqft == null || u.sqft < minSqft)) return false;
-        if (favoritesOnly && !favorites.has(u.unitId)) return false;
+        if (state.favoritesOnly && !favorites.has(u.unitId)) return false;
         return true;
       });
       renderTable(filtered);
@@ -116,12 +173,24 @@
     }
     window.toggleFavorite = toggleFavorite;
 
+    function renderChangeCell(unitId) {
+      const change = recentChangeByUnit.get(unitId);
+      if (!change) return '—';
+      const isDown = change.type === 'price_decrease';
+      const delta = Math.abs(change.newValue - change.oldValue);
+      const arrow = isDown ? '▼' : '▲';
+      const cls = isDown ? 'tag-down' : 'tag-up';
+      const ago = daysAgo(change.detectedAt);
+      const when = ago <= 0 ? 'today' : ago === 1 ? '1d ago' : `${ago}d ago`;
+      return `<span class="tag ${cls}">${arrow} $${delta.toLocaleString()}</span> <span class="meta-inline">${when}</span>`;
+    }
+
     function renderTable(units) {
       const body = document.getElementById('units-body');
       const oneDayAgo = Date.now() - 24 * 60 * 60 * 1000;
 
       if (!units.length) {
-        body.innerHTML = '<tr><td colspan="9" class="empty">No units match these filters.</td></tr>';
+        body.innerHTML = '<tr><td colspan="10" class="empty">No units match these filters.</td></tr>';
         return;
       }
 
@@ -136,6 +205,7 @@
           <td>${esc(u.typeLine)}</td>
           <td>${esc(u.sqft)}</td>
           <td class="price">${fmtPrice(u.price)}</td>
+          <td>${renderChangeCell(u.unitId)}</td>
           <td>${esc(u.available)}</td>
           <td>${dl != null ? dl : '—'}</td>
           <td><a href="${esc(u.detailUrl)}" target="_blank" rel="noopener">view</a></td>
@@ -143,12 +213,12 @@
       }).join('');
     }
 
-    ['f-bedrooms', 'f-building', 'f-min-price', 'f-max-price', 'f-min-sqft', 'f-favorites-only'].forEach((id) => {
+    ['f-building', 'f-min-price', 'f-max-price', 'f-min-sqft', 'f-favorites-only'].forEach((id) => {
       document.getElementById(id).addEventListener('input', applyFilters);
       document.getElementById(id).addEventListener('change', applyFilters);
     });
     document.getElementById('f-reset').addEventListener('click', () => {
-      document.getElementById('f-bedrooms').value = '';
+      document.querySelectorAll('.f-bedroom-cb').forEach((cb) => { cb.checked = DEFAULT_BEDROOMS.includes(cb.value); });
       document.getElementById('f-building').value = '';
       document.getElementById('f-min-price').value = '';
       document.getElementById('f-max-price').value = '';
@@ -161,8 +231,19 @@
       fetch('data/units.json').then(r => r.json()).catch(() => []),
       fetch('data/meta.json').then(r => r.json()).catch(() => null),
       fetch('data/market_history.json').then(r => r.json()).catch(() => []),
-    ]).then(([units, meta, marketHistory]) => {
+      fetch('data/events.json').then(r => r.json()).catch(() => []),
+    ]).then(([units, meta, marketHistory, events]) => {
       allUnits = units;
+
+      // events.json is newest-first, so the first match per unit is its most recent change.
+      const PRICE_CHANGE_WINDOW_DAYS = 14;
+      for (const e of events) {
+        if (e.type !== 'price_increase' && e.type !== 'price_decrease') continue;
+        if (recentChangeByUnit.has(e.unitId)) continue;
+        if (daysAgo(e.detectedAt) > PRICE_CHANGE_WINDOW_DAYS) continue;
+        recentChangeByUnit.set(e.unitId, e);
+      }
+
       const metaEl = document.getElementById('meta');
       if (meta) {
         const when = new Date(meta.lastRunAt).toLocaleString();
@@ -172,7 +253,7 @@
       }
 
       populateFilterOptions(units);
-      renderTable(units);
+      applyFilters();
 
       if (marketHistory && marketHistory.length >= 2) {
         document.getElementById('trend-card').style.display = '';
