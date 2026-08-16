@@ -6,9 +6,11 @@ const DATA_DIR = path.join(__dirname, '..', 'docs', 'data');
 const UNITS_FILE = path.join(DATA_DIR, 'units.json');
 const EVENTS_FILE = path.join(DATA_DIR, 'events.json');
 const META_FILE = path.join(DATA_DIR, 'meta.json');
+const MARKET_HISTORY_FILE = path.join(DATA_DIR, 'market_history.json');
 
 const MAX_EVENTS = 500;
 const MAX_PRICE_HISTORY_PER_UNIT = 100;
+const MAX_MARKET_HISTORY = 1000;
 
 function readJson(file, fallback) {
   try {
@@ -101,14 +103,23 @@ async function main() {
 
   const allEvents = [...newEvents, ...events].slice(0, MAX_EVENTS);
 
+  const pricedUnits = nextUnits.filter((u) => u.price != null);
+  const avgPrice = pricedUnits.length
+    ? Math.round(pricedUnits.reduce((sum, u) => sum + u.price, 0) / pricedUnits.length)
+    : null;
+  const marketHistory = readJson(MARKET_HISTORY_FILE, []);
+  marketHistory.push({ at: now, avgPrice, unitCount: nextUnits.length });
+
   writeJson(UNITS_FILE, nextUnits);
   writeJson(EVENTS_FILE, allEvents);
+  writeJson(MARKET_HISTORY_FILE, marketHistory.slice(-MAX_MARKET_HISTORY));
   writeJson(META_FILE, {
     lastRunAt: now,
     unitCount: nextUnits.length,
     newCount,
     removedCount,
     priceChangeCount,
+    avgPrice,
   });
 
   console.log(`Scrape complete: ${nextUnits.length} units (${newCount} new, ${removedCount} removed, ${priceChangeCount} price changes)`);

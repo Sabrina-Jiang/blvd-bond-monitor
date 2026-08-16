@@ -15,9 +15,11 @@
     </nav>
   </header>
   <main id="main">Loading…</main>
+  <script src="chart.js"></script>
   <script>
     const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const fmtPrice = (p) => (p != null ? '$' + Number(p).toLocaleString() : '—');
+    const daysListed = (firstSeenAt) => firstSeenAt ? Math.max(0, Math.floor((Date.now() - new Date(firstSeenAt).getTime()) / 86400000)) : null;
 
     const id = new URLSearchParams(location.search).get('id') || '';
 
@@ -25,7 +27,8 @@
       const unit = units.find((u) => u.unitId === id);
       const main = document.getElementById('main');
 
-      const historyRows = (unit && unit.priceHistory ? unit.priceHistory : [])
+      const priceHistory = (unit && unit.priceHistory) || [];
+      const historyRows = priceHistory
         .slice().reverse()
         .map((h) => `<tr><td>${new Date(h.at).toLocaleString()}</td><td>${fmtPrice(h.price)}</td></tr>`)
         .join('') || '<tr><td colspan="2" class="empty">No price history yet.</td></tr>';
@@ -36,17 +39,24 @@
         return;
       }
 
+      const dl = daysListed(unit.firstSeenAt);
+
       main.innerHTML = `
         <div class="card">
           <h2>${esc(unit.unitId)} — ${esc(unit.address)}</h2>
           <p>${esc(unit.typeLine)} · ${esc(unit.sqft)} sqft</p>
           <p class="price">${fmtPrice(unit.price)} /mo — ${esc(unit.available)}</p>
+          <p class="meta">Listed ${dl != null ? dl : '—'} day${dl === 1 ? '' : 's'} (first seen ${unit.firstSeenAt ? new Date(unit.firstSeenAt).toLocaleDateString() : '—'})</p>
           <p><a href="${esc(unit.detailUrl)}" target="_blank" rel="noopener">View on blvdbond.com</a></p>
         </div>
         <div class="card">
           <h3>Price history</h3>
+          <div id="unit-chart"></div>
           <table><thead><tr><th>Date</th><th>Price</th></tr></thead><tbody>${historyRows}</tbody></table>
         </div>`;
+
+      const points = priceHistory.map((h) => ({ x: new Date(h.at), y: h.price }));
+      renderLineChart(document.getElementById('unit-chart'), points);
     });
   </script>
 </body>

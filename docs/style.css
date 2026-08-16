@@ -58,3 +58,17 @@ a.unit-link:hover { text-decoration: underline; }
 .card { background: var(--card); border-radius: 8px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); margin-bottom: 20px; }
 
 .empty { padding: 20px; color: var(--muted); text-align: center; }
+
+.filters .filter-row { display: flex; flex-wrap: wrap; align-items: end; gap: 16px; }
+.filters label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px; }
+.filters select, .filters input[type="number"] { padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px; font-size: 14px; font-family: inherit; min-width: 90px; color: var(--ink); background: #fff; }
+.filters .checkbox-label { flex-direction: row; align-items: center; gap: 6px; text-transform: none; font-weight: 400; font-size: 13px; }
+.filters .checkbox-label input { width: auto; }
+
+.btn { display: inline-block; background: var(--rust); color: #fff; border: none; padding: 8px 16px; border-radius: 6px; font-size: 13px; cursor: pointer; text-decoration: none; }
+.btn:hover { opacity: 0.9; }
+.btn-secondary { background: #ece9e4; color: var(--ink); }
+
+.star-btn { background: none; border: none; cursor: pointer; font-size: 17px; color: #c8c1b6; line-height: 1; padding: 0; }
+.star-btn.is-fav { color: #d4a017; }
+.star-btn:hover { color: #d4a017; }
