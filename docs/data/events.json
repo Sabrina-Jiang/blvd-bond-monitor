@@ -1,0 +1,342 @@
+[
+  {
+    "detectedAt": "2026-08-16T00:30:25.178Z",
+    "unitId": "D-215",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "D-215",
+      "externalUnitId": "28675274",
+      "address": "66 bond st",
+      "typeLine": "Studio - 1 BA - 641 sqft",
+      "bedrooms": "Studio",
+      "floorplanName": "Studio - S1 Bldg D",
+      "sqft": 641,
+      "price": 3208,
+      "available": "Now",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=28675274&FloorPlanID=3580889&myOlePropertyid=1319715&MoveInDate=2026-08-15",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/D-215-bldg-66-bond-st/",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/MA _Watertown_BlvdBondBuildingD_p1292670_BlvdBondS1631687_2_FloorPlan.png"
+    }
+  },
+  {
+    "detectedAt": "2026-08-16T00:30:25.178Z",
+    "unitId": "D-510",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "D-510",
+      "externalUnitId": "28675338",
+      "address": "66 bond st",
+      "typeLine": "1BR - 1 BA - 701 sqft",
+      "bedrooms": "1BR",
+      "floorplanName": "1 Bed/1 Bath - A7 Bldg D",
+      "sqft": 701,
+      "price": 3275,
+      "available": "12/05/2026",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=28675338&FloorPlanID=3580877&myOlePropertyid=1319715&MoveInDate=2026-12-05",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/D-510-bldg-66-bond-st/",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/MA _Watertown_BlvdBondBuildingD_p1292670_BlvdBondA7701_2_FloorPlan.png"
+    }
+  },
+  {
+    "detectedAt": "2026-08-16T00:30:25.178Z",
+    "unitId": "D-213",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "D-213",
+      "externalUnitId": "28675272",
+      "address": "66 bond st",
+      "typeLine": "Studio - 1 BA - 641 sqft",
+      "bedrooms": "Studio",
+      "floorplanName": "Studio - S1 Bldg D",
+      "sqft": 641,
+      "price": 3322,
+      "available": "09/03/2026",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=28675272&FloorPlanID=3580889&myOlePropertyid=1319715&MoveInDate=2026-09-03",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/D-213-bldg-66-bond-st/",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/MA _Watertown_BlvdBondBuildingD_p1292670_BlvdBondS1631687_2_FloorPlan.png"
+    }
+  },
+  {
+    "detectedAt": "2026-08-16T00:30:25.178Z",
+    "unitId": "D-212",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "D-212",
+      "externalUnitId": "28675271",
+      "address": "66 bond st",
+      "typeLine": "1BR - 1 BA - 701 sqft",
+      "bedrooms": "1BR",
+      "floorplanName": "1 Bed/1 Bath - A7 Bldg D",
+      "sqft": 701,
+      "price": 3363,
+      "available": "10/07/2026",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=28675271&FloorPlanID=3580877&myOlePropertyid=1319715&MoveInDate=2026-10-07",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/D-212-bldg-66-bond-st/",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/MA _Watertown_BlvdBondBuildingD_p1292670_BlvdBondA7701_2_FloorPlan.png"
+    }
+  },
+  {
+    "detectedAt": "2026-08-16T00:30:25.178Z",
+    "unitId": "C-214",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "C-214",
+      "externalUnitId": "29811070",
+      "address": "22 bond st",
+      "typeLine": "1BR - 1 BA - 785 sqft",
+      "bedrooms": "1BR",
+      "floorplanName": "1 Bed/1 Bath - A1 Bldg C",
+      "sqft": 785,
+      "price": 3386,
+      "available": "09/10/2026",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=29811070&FloorPlanID=4005733&myOlePropertyid=1319715&MoveInDate=2026-09-10",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-214-bldg-22-bond-st/",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/A1.png"
+    }
+  },
+  {
+    "detectedAt": "2026-08-16T00:30:25.178Z",
+    "unitId": "C-307",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "C-307",
+      "externalUnitId": "29811090",
+      "address": "22 bond st",
+      "typeLine": "Studio - 1 BA - 643 sqft",
+      "bedrooms": "Studio",
+      "floorplanName": "Studio - S2 Bldg C",
+      "sqft": 643,
+      "price": 3392,
+      "available": "10/03/2026",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=29811090&FloorPlanID=4005808&myOlePropertyid=1319715&MoveInDate=2026-10-03",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-307-bldg-22-bond-st/",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/S2.png"
+    }
+  },
+  {
+    "detectedAt": "2026-08-16T00:30:25.178Z",
+    "unitId": "D-516",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "D-516",
+      "externalUnitId": "28675344",
+      "address": "66 bond st",
+      "typeLine": "Studio - 1 BA - 641 sqft",
+      "bedrooms": "Studio",
+      "floorplanName": "Studio - S1 Bldg D",
+      "sqft": 641,
+      "price": 3428,
+      "available": "08/21/2026",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=28675344&FloorPlanID=3580889&myOlePropertyid=1319715&MoveInDate=2026-08-21",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/D-516-bldg-66-bond-st/",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/MA _Watertown_BlvdBondBuildingD_p1292670_BlvdBondS1631687_2_FloorPlan.png"
+    }
+  },
+  {
+    "detectedAt": "2026-08-16T00:30:25.178Z",
+    "unitId": "C-401",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "C-401",
+      "externalUnitId": "29811111",
+      "address": "22 bond st",
+      "typeLine": "1BR - 1 BA - 799 sqft",
+      "bedrooms": "1BR",
+      "floorplanName": "1 Bed/1 Bath - A4 Bldg C",
+      "sqft": 799,
+      "price": 3430,
+      "available": "Now",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=29811111&FloorPlanID=4005742&myOlePropertyid=1319715&MoveInDate=2026-08-15",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-401-bldg-22-bond-st/",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/A4.png"
+    }
+  },
+  {
+    "detectedAt": "2026-08-16T00:30:25.178Z",
+    "unitId": "C-507",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "C-507",
+      "externalUnitId": "29811144",
+      "address": "22 bond st",
+      "typeLine": "Studio - 1 BA - 643 sqft",
+      "bedrooms": "Studio",
+      "floorplanName": "Studio - S2 Bldg C",
+      "sqft": 643,
+      "price": 3433,
+      "available": "08/18/2026",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=29811144&FloorPlanID=4005808&myOlePropertyid=1319715&MoveInDate=2026-08-18",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-507-bldg-22-bond-st/",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/S2.png"
+    }
+  },
+  {
+    "detectedAt": "2026-08-16T00:30:25.178Z",
+    "unitId": "C-417",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "C-417",
+      "externalUnitId": "29811127",
+      "address": "22 bond st",
+      "typeLine": "1BR - 1 BA - 785 sqft",
+      "bedrooms": "1BR",
+      "floorplanName": "1 Bed/1 Bath - A1 Bldg C",
+      "sqft": 785,
+      "price": 3446,
+      "available": "09/14/2026",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=29811127&FloorPlanID=4005733&myOlePropertyid=1319715&MoveInDate=2026-09-14",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-417-bldg-22-bond-st",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/A1.png"
+    }
+  },
+  {
+    "detectedAt": "2026-08-16T00:30:25.178Z",
+    "unitId": "C-615",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "C-615",
+      "externalUnitId": "29811177",
+      "address": "22 bond st",
+      "typeLine": "1BR - 1 BA - 785 sqft",
+      "bedrooms": "1BR",
+      "floorplanName": "1 Bed/1 Bath - A1 Bldg C",
+      "sqft": 785,
+      "price": 3466,
+      "available": "08/31/2026",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=29811177&FloorPlanID=4005733&myOlePropertyid=1319715&MoveInDate=2026-08-31",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-615-bldg-22-bond-st",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/A1.png"
+    }
+  },
+  {
+    "detectedAt": "2026-08-16T00:30:25.178Z",
+    "unitId": "C-423",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "C-423",
+      "externalUnitId": "29811133",
+      "address": "22 bond st",
+      "typeLine": "1BR - 1 BA - 952 sqft",
+      "bedrooms": "1BR",
+      "floorplanName": "1 Bed/1 Bath - A3 Bldg C",
+      "sqft": 952,
+      "price": 3667,
+      "available": "Now",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=29811133&FloorPlanID=4005737&myOlePropertyid=1319715&MoveInDate=2026-08-15",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-423-bldg-22-bond-st",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/A3.png"
+    }
+  },
+  {
+    "detectedAt": "2026-08-16T00:30:25.178Z",
+    "unitId": "D-503",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "D-503",
+      "externalUnitId": "28675331",
+      "address": "66 bond st",
+      "typeLine": "1BR - 1 BA - 1015 sqft",
+      "bedrooms": "1BR",
+      "floorplanName": "1 Bed/1 Bath Den - AD6 Bldg D",
+      "sqft": 1015,
+      "price": 3860,
+      "available": "09/22/2026",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=28675331&FloorPlanID=3580882&myOlePropertyid=1319715&MoveInDate=2026-09-22",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/D-503-bldg-66-bond-st",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/2/8131/AD6 - D.jpg"
+    }
+  },
+  {
+    "detectedAt": "2026-08-16T00:30:25.178Z",
+    "unitId": "C-608",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "C-608",
+      "externalUnitId": "29811172",
+      "address": "22 bond st",
+      "typeLine": "2BR - 2 BA - 1084 sqft",
+      "bedrooms": "2BR",
+      "floorplanName": "2 Bed/2 Bath - B6 Bldg C",
+      "sqft": 1084,
+      "price": 3996,
+      "available": "Now",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=29811172&FloorPlanID=4005784&myOlePropertyid=1319715&MoveInDate=2026-08-15",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-608-bldg-22-bond-st",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/B6.png"
+    }
+  },
+  {
+    "detectedAt": "2026-08-16T00:30:25.178Z",
+    "unitId": "C-204",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "C-204",
+      "externalUnitId": "29811061",
+      "address": "22 bond st",
+      "typeLine": "2BR - 2 BA - 1070 sqft",
+      "bedrooms": "2BR",
+      "floorplanName": "2 Bed/2 Bath - B1 Bldg C",
+      "sqft": 1070,
+      "price": 4313,
+      "available": "08/29/2026",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=29811061&FloorPlanID=4005765&myOlePropertyid=1319715&MoveInDate=2026-08-29",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-204-bldg-22-bond-st",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/B1.png"
+    }
+  },
+  {
+    "detectedAt": "2026-08-16T00:30:25.178Z",
+    "unitId": "C-226",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "C-226",
+      "externalUnitId": "29811082",
+      "address": "22 bond st",
+      "typeLine": "2BR - 2 BA - 1166 sqft",
+      "bedrooms": "2BR",
+      "floorplanName": "2 Bed/2 Bath -B2 Bldg C",
+      "sqft": 1166,
+      "price": 4382,
+      "available": "11/01/2026",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=29811082&FloorPlanID=4005768&myOlePropertyid=1319715&MoveInDate=2026-11-01",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-226-bldg-22-bond-st",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/Blvd Bond_B2_1166.png"
+    }
+  },
+  {
+    "detectedAt": "2026-08-16T00:30:25.178Z",
+    "unitId": "C-522",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "C-522",
+      "externalUnitId": "29811159",
+      "address": "22 bond st",
+      "typeLine": "2BR - 2 BA - 1123 sqft",
+      "bedrooms": "2BR",
+      "floorplanName": "2 Bed/2 Bath - B3 Bldg C",
+      "sqft": 1123,
+      "price": 4458,
+      "available": "09/20/2026",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=29811159&FloorPlanID=4005771&myOlePropertyid=1319715&MoveInDate=2026-09-20",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-522-bldg-22-bond-st",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/Blvd Bond_B3_1123.png"
+    }
+  }
+]

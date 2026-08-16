@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Change History — Blvd & Bond Monitor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Blvd &amp; Bond Monitor</h1>
+    <nav>
+      <a href="index.html">Current Units</a>
+      <a href="history.html">Change History</a>
+    </nav>
+  </header>
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th>When</th>
+          <th>Unit</th>
+          <th>Event</th>
+          <th>Change</th>
+        </tr>
+      </thead>
+      <tbody id="events-body"></tbody>
+    </table>
+  </main>
+  <script>
+    const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const fmtPrice = (p) => (p != null ? '$' + Number(p).toLocaleString() : '—');
+
+    const TAGS = {
+      new_unit: '<span class="tag tag-new">New listing</span>',
+      removed_unit: '<span class="tag tag-removed">Removed</span>',
+      price_increase: '<span class="tag tag-up">Price up</span>',
+      price_decrease: '<span class="tag tag-down">Price down</span>',
+      availability_change: '<span class="tag tag-avail">Availability</span>',
+    };
+
+    function describe(e) {
+      if (e.type === 'price_increase' || e.type === 'price_decrease') {
+        return `${fmtPrice(e.oldValue)} → ${fmtPrice(e.newValue)}`;
+      }
+      if (e.type === 'availability_change') {
+        return `"${esc(e.oldValue)}" → "${esc(e.newValue)}"`;
+      }
+      if (e.type === 'new_unit') {
+        const d = e.newValue || {};
+        return `${esc(d.typeLine)} — ${fmtPrice(d.price)}`;
+      }
+      if (e.type === 'removed_unit') {
+        const d = e.oldValue || {};
+        return `was ${esc(d.typeLine)} — ${fmtPrice(d.price)}`;
+      }
+      return '';
+    }
+
+    fetch('data/events.json').then(r => r.json()).catch(() => []).then((events) => {
+      const body = document.getElementById('events-body');
+      if (!events.length) {
+        body.innerHTML = '<tr><td colspan="4" class="empty">No events yet.</td></tr>';
+        return;
+      }
+      body.innerHTML = events.map((e) => `<tr>
+        <td>${new Date(e.detectedAt).toLocaleString()}</td>
+        <td><a class="unit-link" href="unit.html?id=${encodeURIComponent(e.unitId)}">${esc(e.unitId)}</a></td>
+        <td>${TAGS[e.type] || esc(e.type)}</td>
+        <td>${describe(e)}</td>
+      </tr>`).join('');
+    });
+  </script>
+</body>
+</html>

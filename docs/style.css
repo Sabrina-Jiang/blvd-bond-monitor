@@ -1,0 +1,60 @@
+:root {
+  --bg: #f7f5f2;
+  --card: #ffffff;
+  --ink: #26231f;
+  --muted: #7a746c;
+  --rust: #a8503a;
+  --line: #e6e1da;
+  --good: #2f7a4f;
+  --bad: #b53c3c;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+header {
+  background: var(--ink);
+  color: #fff;
+  padding: 20px 32px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+header h1 { margin: 0; font-size: 20px; letter-spacing: 0.5px; }
+header nav a { color: #ddd7cc; text-decoration: none; margin-left: 20px; font-size: 14px; }
+header nav a:hover { color: #fff; }
+
+main { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+
+.meta { color: var(--muted); font-size: 13px; margin-bottom: 20px; }
+
+table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); font-size: 14px; }
+th { background: #f0ece5; font-weight: 600; color: var(--muted); text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #faf8f5; }
+tr.is-new td { background: #f3faf5; }
+
+.price { font-weight: 600; }
+.tag { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-left: 6px; }
+.tag-new { background: #e4f3e8; color: var(--good); }
+.tag-up { background: #fbe8e8; color: var(--bad); }
+.tag-down { background: #e4f3e8; color: var(--good); }
+.tag-removed { background: #ece9e4; color: var(--muted); }
+.tag-avail { background: #eaf0fb; color: #2a5db0; }
+
+a.unit-link { color: var(--rust); text-decoration: none; font-weight: 600; }
+a.unit-link:hover { text-decoration: underline; }
+
+.card { background: var(--card); border-radius: 8px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); margin-bottom: 20px; }
+
+.empty { padding: 20px; color: var(--muted); text-align: center; }

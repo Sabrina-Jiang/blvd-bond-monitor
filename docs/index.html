@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blvd & Bond Monitor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Blvd &amp; Bond Monitor</h1>
+    <nav>
+      <a href="index.html">Current Units</a>
+      <a href="history.html">Change History</a>
+    </nav>
+  </header>
+  <main>
+    <p class="meta" id="meta">Loading…</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Unit</th>
+          <th>Building</th>
+          <th>Type</th>
+          <th>Sqft</th>
+          <th>Price</th>
+          <th>Available</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="units-body"></tbody>
+    </table>
+  </main>
+  <script>
+    const fmtPrice = (p) => (p != null ? '$' + Number(p).toLocaleString() : '—');
+    const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+    Promise.all([
+      fetch('data/units.json').then(r => r.json()).catch(() => []),
+      fetch('data/meta.json').then(r => r.json()).catch(() => null),
+    ]).then(([units, meta]) => {
+      const metaEl = document.getElementById('meta');
+      if (meta) {
+        const when = new Date(meta.lastRunAt).toLocaleString();
+        metaEl.textContent = `Last scrape: ${when} — ${meta.unitCount} units (${meta.newCount} new, ${meta.removedCount} removed, ${meta.priceChangeCount} price changes)`;
+      } else {
+        metaEl.textContent = 'No scrape data yet — the first scheduled run will populate this.';
+      }
+
+      const oneDayAgo = Date.now() - 24 * 60 * 60 * 1000;
+      const body = document.getElementById('units-body');
+
+      if (!units.length) {
+        body.innerHTML = '<tr><td colspan="7" class="empty">No data yet.</td></tr>';
+        return;
+      }
+
+      body.innerHTML = units.map((u) => {
+        const isNew = u.firstSeenAt && new Date(u.firstSeenAt).getTime() > oneDayAgo;
+        return `<tr class="${isNew ? 'is-new' : ''}">
+          <td><a class="unit-link" href="unit.html?id=${encodeURIComponent(u.unitId)}">${esc(u.unitId)}</a>${isNew ? '<span class="tag tag-new">NEW</span>' : ''}</td>
+          <td>${esc(u.address)}</td>
+          <td>${esc(u.typeLine)}</td>
+          <td>${esc(u.sqft)}</td>
+          <td class="price">${fmtPrice(u.price)}</td>
+          <td>${esc(u.available)}</td>
+          <td><a href="${esc(u.detailUrl)}" target="_blank" rel="noopener">view</a></td>
+        </tr>`;
+      }).join('');
+    });
+  </script>
+</body>
+</html>
