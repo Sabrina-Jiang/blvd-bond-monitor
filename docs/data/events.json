@@ -1,5 +1,12 @@
 [
   {
+    "detectedAt": "2026-08-17T15:26:29.363Z",
+    "unitId": "D-215",
+    "type": "price_decrease",
+    "oldValue": 3198,
+    "newValue": 3188
+  },
+  {
     "detectedAt": "2026-08-16T15:22:59.588Z",
     "unitId": "D-215",
     "type": "price_decrease",
