@@ -51,6 +51,9 @@ tr.is-new td { background: #f3faf5; }
 .tag-down { background: #e4f3e8; color: var(--good); }
 .tag-removed { background: #ece9e4; color: var(--muted); }
 .tag-avail { background: #eaf0fb; color: #2a5db0; }
+.tag-low { background: #f3ecfb; color: #6a3fa0; }
+
+.sparkline-empty { color: var(--muted); font-size: 12px; }
 
 a.unit-link { color: var(--rust); text-decoration: none; font-weight: 600; }
 a.unit-link:hover { text-decoration: underline; }

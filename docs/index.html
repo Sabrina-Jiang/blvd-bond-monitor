@@ -43,6 +43,9 @@
         <label class="checkbox-label">
           <input type="checkbox" id="f-favorites-only"> Favorites only
         </label>
+        <label class="checkbox-label">
+          <input type="checkbox" id="f-reduced-only"> Recently reduced only
+        </label>
         <button type="button" id="f-reset" class="btn btn-secondary">Reset</button>
       </div>
     </div>
@@ -57,6 +60,7 @@
           <th>Sqft</th>
           <th>Price</th>
           <th>Recent change</th>
+          <th>Trend</th>
           <th>Available</th>
           <th>Days listed</th>
           <th></th>
@@ -126,6 +130,7 @@
         document.getElementById('f-max-price').value = saved.maxPrice ?? '';
         document.getElementById('f-min-sqft').value = saved.minSqft ?? '';
         document.getElementById('f-favorites-only').checked = !!saved.favoritesOnly;
+        document.getElementById('f-reduced-only').checked = !!saved.reducedOnly;
       }
 
       group.querySelectorAll('.f-bedroom-cb').forEach((cb) => {
@@ -142,6 +147,7 @@
         maxPrice: document.getElementById('f-max-price').value,
         minSqft: document.getElementById('f-min-sqft').value,
         favoritesOnly: document.getElementById('f-favorites-only').checked,
+        reducedOnly: document.getElementById('f-reduced-only').checked,
       };
     }
 
@@ -161,6 +167,10 @@
         if (!isNaN(maxPrice) && (u.price == null || u.price > maxPrice)) return false;
         if (!isNaN(minSqft) && (u.sqft == null || u.sqft < minSqft)) return false;
         if (state.favoritesOnly && !favorites.has(u.unitId)) return false;
+        if (state.reducedOnly) {
+          const change = recentChangeByUnit.get(u.unitId);
+          if (!change || change.type !== 'price_decrease') return false;
+        }
         return true;
       });
       renderTable(filtered);
@@ -190,7 +200,7 @@
       const oneDayAgo = Date.now() - 24 * 60 * 60 * 1000;
 
       if (!units.length) {
-        body.innerHTML = '<tr><td colspan="10" class="empty">No units match these filters.</td></tr>';
+        body.innerHTML = '<tr><td colspan="11" class="empty">No units match these filters.</td></tr>';
         return;
       }
 
@@ -198,14 +208,18 @@
         const isNew = u.firstSeenAt && new Date(u.firstSeenAt).getTime() > oneDayAgo;
         const isFav = favorites.has(u.unitId);
         const dl = daysListed(u.firstSeenAt);
+        const history = u.priceHistory || [];
+        const isLowest = history.length >= 2 && u.price != null && u.price <= Math.min(...history.map((h) => h.price));
+        const points = history.map((h) => ({ x: new Date(h.at), y: h.price }));
         return `<tr class="${isNew ? 'is-new' : ''}">
           <td><button type="button" class="star-btn ${isFav ? 'is-fav' : ''}" onclick="toggleFavorite('${u.unitId}')" aria-label="toggle favorite">${isFav ? '★' : '☆'}</button></td>
-          <td><a class="unit-link" href="unit.html?id=${encodeURIComponent(u.unitId)}">${esc(u.unitId)}</a>${isNew ? '<span class="tag tag-new">NEW</span>' : ''}</td>
+          <td><a class="unit-link" href="unit.html?id=${encodeURIComponent(u.unitId)}">${esc(u.unitId)}</a>${isNew ? '<span class="tag tag-new">NEW</span>' : ''}${isLowest ? '<span class="tag tag-low">LOWEST</span>' : ''}</td>
           <td>${esc(u.address)}</td>
           <td>${esc(u.typeLine)}</td>
           <td>${esc(u.sqft)}</td>
           <td class="price">${fmtPrice(u.price)}</td>
           <td>${renderChangeCell(u.unitId)}</td>
+          <td>${sparklineSVG(points)}</td>
           <td>${esc(u.available)}</td>
           <td>${dl != null ? dl : '—'}</td>
           <td><a href="${esc(u.detailUrl)}" target="_blank" rel="noopener">view</a></td>
@@ -213,7 +227,7 @@
       }).join('');
     }
 
-    ['f-building', 'f-min-price', 'f-max-price', 'f-min-sqft', 'f-favorites-only'].forEach((id) => {
+    ['f-building', 'f-min-price', 'f-max-price', 'f-min-sqft', 'f-favorites-only', 'f-reduced-only'].forEach((id) => {
       document.getElementById(id).addEventListener('input', applyFilters);
       document.getElementById(id).addEventListener('change', applyFilters);
     });
@@ -224,6 +238,7 @@
       document.getElementById('f-max-price').value = '';
       document.getElementById('f-min-sqft').value = '';
       document.getElementById('f-favorites-only').checked = false;
+      document.getElementById('f-reduced-only').checked = false;
       applyFilters();
     });
 

@@ -40,3 +40,38 @@ function renderLineChart(container, points, opts) {
       <text x="${padding}" y="${height - padding + 14}" font-size="11" fill="#7a746c">$${Math.round(minY).toLocaleString()}</text>
     </svg>`;
 }
+
+// Compact, label-free line chart for embedding inline (e.g. a table cell). Returns an HTML string.
+function sparklineSVG(points, opts) {
+  const width = (opts && opts.width) || 140;
+  const height = (opts && opts.height) || 32;
+  const padding = 4;
+
+  if (!points || points.length < 2) {
+    return '<span class="sparkline-empty">flat</span>';
+  }
+
+  const xs = points.map((p) => p.x.getTime());
+  const ys = points.map((p) => p.y);
+  const minX = Math.min(...xs);
+  const maxX = Math.max(...xs);
+  const minY = Math.min(...ys);
+  const maxY = Math.max(...ys);
+  const spanX = maxX - minX || 1;
+  const spanY = maxY - minY || 1;
+
+  const sx = (x) => padding + ((x - minX) / spanX) * (width - padding * 2);
+  const sy = (y) => height - padding - ((y - minY) / spanY) * (height - padding * 2);
+
+  const path = points
+    .map((p, i) => `${i === 0 ? 'M' : 'L'} ${sx(p.x.getTime()).toFixed(1)} ${sy(p.y).toFixed(1)}`)
+    .join(' ');
+
+  const last = points[points.length - 1];
+  const color = points[0].y > last.y ? '#2f7a4f' : points[0].y < last.y ? '#b53c3c' : '#a8503a';
+
+  return `<svg viewBox="0 0 ${width} ${height}" width="${width}" height="${height}">
+      <path d="${path}" fill="none" stroke="${color}" stroke-width="1.5" />
+      <circle cx="${sx(last.x.getTime()).toFixed(1)}" cy="${sy(last.y).toFixed(1)}" r="2" fill="${color}"></circle>
+    </svg>`;
+}
