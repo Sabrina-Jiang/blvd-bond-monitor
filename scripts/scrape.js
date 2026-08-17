@@ -6,11 +6,9 @@ const DATA_DIR = path.join(__dirname, '..', 'docs', 'data');
 const UNITS_FILE = path.join(DATA_DIR, 'units.json');
 const EVENTS_FILE = path.join(DATA_DIR, 'events.json');
 const META_FILE = path.join(DATA_DIR, 'meta.json');
-const MARKET_HISTORY_FILE = path.join(DATA_DIR, 'market_history.json');
 
 const MAX_EVENTS = 500;
-const MAX_PRICE_HISTORY_PER_UNIT = 100;
-const MAX_MARKET_HISTORY = 1000;
+const MAX_PRICE_HISTORY_PER_UNIT = 400; // one point/day covers well over a year
 
 function readJson(file, fallback) {
   try {
@@ -22,6 +20,23 @@ function readJson(file, fallback) {
 
 function writeJson(file, data) {
   fs.writeFileSync(file, JSON.stringify(data, null, 2) + '\n');
+}
+
+// Appends a price point, but only one per calendar day — updates today's
+// point in place if we already recorded one today, so the series stays a
+// clean daily series even with hourly scrapes.
+function recordPricePoint(priceHistory, price, now) {
+  if (price == null) return priceHistory;
+  const todayKey = now.slice(0, 10);
+  const last = priceHistory[priceHistory.length - 1];
+  if (last && last.at.slice(0, 10) === todayKey) {
+    last.price = price;
+    last.at = now;
+  } else {
+    priceHistory.push({ price, at: now });
+    if (priceHistory.length > MAX_PRICE_HISTORY_PER_UNIT) priceHistory.shift();
+  }
+  return priceHistory;
 }
 
 async function main() {
@@ -47,19 +62,16 @@ async function main() {
         ...u,
         firstSeenAt: now,
         lastSeenAt: now,
-        priceHistory: u.price != null ? [{ price: u.price, at: now }] : [],
+        priceHistory: recordPricePoint([], u.price, now),
       });
       newEvents.push({ detectedAt: now, unitId: u.unitId, type: 'new_unit', oldValue: null, newValue: u });
       newCount++;
       continue;
     }
 
-    const priceHistory = existing.priceHistory || [];
-    let changed = false;
+    const priceHistory = recordPricePoint(existing.priceHistory || [], u.price, now);
 
     if (existing.price !== u.price && u.price != null) {
-      priceHistory.push({ price: u.price, at: now });
-      if (priceHistory.length > MAX_PRICE_HISTORY_PER_UNIT) priceHistory.shift();
       newEvents.push({
         detectedAt: now,
         unitId: u.unitId,
@@ -68,7 +80,6 @@ async function main() {
         newValue: u.price,
       });
       priceChangeCount++;
-      changed = true;
     }
 
     if (existing.available !== u.available) {
@@ -79,7 +90,6 @@ async function main() {
         oldValue: existing.available,
         newValue: u.available,
       });
-      changed = true;
     }
 
     nextUnits.push({
@@ -88,7 +98,6 @@ async function main() {
       lastSeenAt: now,
       priceHistory,
     });
-    void changed;
   }
 
   let removedCount = 0;
@@ -103,23 +112,14 @@ async function main() {
 
   const allEvents = [...newEvents, ...events].slice(0, MAX_EVENTS);
 
-  const pricedUnits = nextUnits.filter((u) => u.price != null);
-  const avgPrice = pricedUnits.length
-    ? Math.round(pricedUnits.reduce((sum, u) => sum + u.price, 0) / pricedUnits.length)
-    : null;
-  const marketHistory = readJson(MARKET_HISTORY_FILE, []);
-  marketHistory.push({ at: now, avgPrice, unitCount: nextUnits.length });
-
   writeJson(UNITS_FILE, nextUnits);
   writeJson(EVENTS_FILE, allEvents);
-  writeJson(MARKET_HISTORY_FILE, marketHistory.slice(-MAX_MARKET_HISTORY));
   writeJson(META_FILE, {
     lastRunAt: now,
     unitCount: nextUnits.length,
     newCount,
     removedCount,
     priceChangeCount,
-    avgPrice,
   });
 
   console.log(`Scrape complete: ${nextUnits.length} units (${newCount} new, ${removedCount} removed, ${priceChangeCount} price changes)`);

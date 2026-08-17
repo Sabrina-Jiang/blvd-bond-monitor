@@ -17,11 +17,6 @@
   <main>
     <p class="meta" id="meta">Loading…</p>
 
-    <div class="card" id="trend-card" style="display:none">
-      <h3>Average price trend</h3>
-      <div id="trend-chart"></div>
-    </div>
-
     <div class="card filters">
       <div class="filter-row">
         <div class="filter-group">
@@ -219,7 +214,7 @@
           <td>${esc(u.sqft)}</td>
           <td class="price">${fmtPrice(u.price)}</td>
           <td>${renderChangeCell(u.unitId)}</td>
-          <td>${sparklineSVG(points)}</td>
+          <td>${sparklineSVG(points, { width: 180, height: 36 })}</td>
           <td>${esc(u.available)}</td>
           <td>${dl != null ? dl : '—'}</td>
           <td><a href="${esc(u.detailUrl)}" target="_blank" rel="noopener">view</a></td>
@@ -245,9 +240,8 @@
     Promise.all([
       fetch('data/units.json').then(r => r.json()).catch(() => []),
       fetch('data/meta.json').then(r => r.json()).catch(() => null),
-      fetch('data/market_history.json').then(r => r.json()).catch(() => []),
       fetch('data/events.json').then(r => r.json()).catch(() => []),
-    ]).then(([units, meta, marketHistory, events]) => {
+    ]).then(([units, meta, events]) => {
       allUnits = units;
 
       // events.json is newest-first, so the first match per unit is its most recent change.
@@ -269,12 +263,6 @@
 
       populateFilterOptions(units);
       applyFilters();
-
-      if (marketHistory && marketHistory.length >= 2) {
-        document.getElementById('trend-card').style.display = '';
-        const points = marketHistory.filter((m) => m.avgPrice != null).map((m) => ({ x: new Date(m.at), y: m.avgPrice }));
-        renderLineChart(document.getElementById('trend-chart'), points);
-      }
     });
   </script>
 </body>
