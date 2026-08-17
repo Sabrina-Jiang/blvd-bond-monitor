@@ -1,5 +1,137 @@
 [
   {
+    "detectedAt": "2026-08-17T18:41:25.619Z",
+    "unitId": "D-215",
+    "type": "price_decrease",
+    "oldValue": 3188,
+    "newValue": 3164
+  },
+  {
+    "detectedAt": "2026-08-17T18:41:25.619Z",
+    "unitId": "D-213",
+    "type": "price_decrease",
+    "oldValue": 3322,
+    "newValue": 3298
+  },
+  {
+    "detectedAt": "2026-08-17T18:41:25.619Z",
+    "unitId": "D-510",
+    "type": "price_increase",
+    "oldValue": 3275,
+    "newValue": 3316
+  },
+  {
+    "detectedAt": "2026-08-17T18:41:25.619Z",
+    "unitId": "C-307",
+    "type": "price_decrease",
+    "oldValue": 3392,
+    "newValue": 3368
+  },
+  {
+    "detectedAt": "2026-08-17T18:41:25.619Z",
+    "unitId": "D-212",
+    "type": "price_increase",
+    "oldValue": 3363,
+    "newValue": 3404
+  },
+  {
+    "detectedAt": "2026-08-17T18:41:25.619Z",
+    "unitId": "D-516",
+    "type": "price_decrease",
+    "oldValue": 3428,
+    "newValue": 3404
+  },
+  {
+    "detectedAt": "2026-08-17T18:41:25.619Z",
+    "unitId": "C-507",
+    "type": "price_decrease",
+    "oldValue": 3433,
+    "newValue": 3409
+  },
+  {
+    "detectedAt": "2026-08-17T18:41:25.619Z",
+    "unitId": "C-401",
+    "type": "price_increase",
+    "oldValue": 3430,
+    "newValue": 3471
+  },
+  {
+    "detectedAt": "2026-08-17T18:41:25.619Z",
+    "unitId": "C-417",
+    "type": "price_increase",
+    "oldValue": 3446,
+    "newValue": 3487
+  },
+  {
+    "detectedAt": "2026-08-17T18:41:25.619Z",
+    "unitId": "C-615",
+    "type": "price_increase",
+    "oldValue": 3466,
+    "newValue": 3507
+  },
+  {
+    "detectedAt": "2026-08-17T18:41:25.619Z",
+    "unitId": "C-423",
+    "type": "price_increase",
+    "oldValue": 3667,
+    "newValue": 3708
+  },
+  {
+    "detectedAt": "2026-08-17T18:41:25.619Z",
+    "unitId": "D-503",
+    "type": "price_increase",
+    "oldValue": 3860,
+    "newValue": 3901
+  },
+  {
+    "detectedAt": "2026-08-17T18:41:25.619Z",
+    "unitId": "C-608",
+    "type": "price_increase",
+    "oldValue": 3996,
+    "newValue": 4080
+  },
+  {
+    "detectedAt": "2026-08-17T18:41:25.619Z",
+    "unitId": "C-204",
+    "type": "price_increase",
+    "oldValue": 4313,
+    "newValue": 4403
+  },
+  {
+    "detectedAt": "2026-08-17T18:41:25.619Z",
+    "unitId": "C-226",
+    "type": "price_increase",
+    "oldValue": 4382,
+    "newValue": 4473
+  },
+  {
+    "detectedAt": "2026-08-17T18:41:25.619Z",
+    "unitId": "C-522",
+    "type": "price_increase",
+    "oldValue": 4458,
+    "newValue": 4548
+  },
+  {
+    "detectedAt": "2026-08-17T18:41:25.619Z",
+    "unitId": "C-626",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "C-626",
+      "externalUnitId": "29811186",
+      "address": "22 bond st",
+      "typeLine": "2BR - 2 BA - 1166 sqft",
+      "bedrooms": "2BR",
+      "floorplanName": "2 Bed/2 Bath -B2 Bldg C",
+      "sqft": 1166,
+      "price": 4583,
+      "available": "10/23/2026",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=29811186&FloorPlanID=4005768&myOlePropertyid=1319715&MoveInDate=2026-10-23",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-626-bldg-22-bond-st",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/Blvd Bond_B2_1166.png"
+    }
+  },
+  {
     "detectedAt": "2026-08-17T16:29:10.067Z",
     "unitId": "C-214",
     "type": "removed_unit",
