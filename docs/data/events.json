@@ -1,5 +1,37 @@
 [
   {
+    "detectedAt": "2026-08-17T16:29:10.067Z",
+    "unitId": "C-214",
+    "type": "removed_unit",
+    "oldValue": {
+      "unitId": "C-214",
+      "externalUnitId": "29811070",
+      "address": "22 bond st",
+      "typeLine": "1BR - 1 BA - 785 sqft",
+      "bedrooms": "1BR",
+      "floorplanName": "1 Bed/1 Bath - A1 Bldg C",
+      "sqft": 785,
+      "price": 3386,
+      "available": "09/10/2026",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=29811070&FloorPlanID=4005733&myOlePropertyid=1319715&MoveInDate=2026-09-10",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-214-bldg-22-bond-st/",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/A1.png",
+      "firstSeenAt": "2026-08-16T00:30:25.178Z",
+      "lastSeenAt": "2026-08-17T15:26:29.363Z",
+      "priceHistory": [
+        {
+          "price": 3386,
+          "at": "2026-08-16T00:30:25.178Z"
+        },
+        {
+          "price": 3386,
+          "at": "2026-08-17T15:26:29.363Z"
+        }
+      ]
+    },
+    "newValue": null
+  },
+  {
     "detectedAt": "2026-08-17T15:26:29.363Z",
     "unitId": "D-215",
     "type": "price_decrease",
