@@ -1,5 +1,25 @@
 [
   {
+    "detectedAt": "2026-08-19T19:27:08.889Z",
+    "unitId": "C-209",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "C-209",
+      "externalUnitId": "29811066",
+      "address": "22 bond st",
+      "typeLine": "Studio - 1 BA - 643 sqft",
+      "bedrooms": "Studio",
+      "floorplanName": "Studio - S2 Bldg C",
+      "sqft": 643,
+      "price": 3100,
+      "available": "09/19/2026",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=29811066&FloorPlanID=4005808&myOlePropertyid=1319715&MoveInDate=2026-09-19",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-209-bldg-22-bond-st/",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/S2.png"
+    }
+  },
+  {
     "detectedAt": "2026-08-19T18:37:20.590Z",
     "unitId": "D-215",
     "type": "price_decrease",
