@@ -1,5 +1,60 @@
 [
   {
+    "detectedAt": "2026-08-21T18:38:01.928Z",
+    "unitId": "C-608",
+    "type": "price_decrease",
+    "oldValue": 4311,
+    "newValue": 4213
+  },
+  {
+    "detectedAt": "2026-08-21T18:38:01.928Z",
+    "unitId": "C-205",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "C-205",
+      "externalUnitId": "29811062",
+      "address": "22 bond st",
+      "typeLine": "2BR - 2 BA - 1040 sqft",
+      "bedrooms": "2BR",
+      "floorplanName": "2 Bed/2 Bath - B4 Bldg C",
+      "sqft": 1040,
+      "price": 4222,
+      "available": "10/30/2026",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=29811062&FloorPlanID=4005776&myOlePropertyid=1319715&MoveInDate=2026-10-30",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-205-bldg-22-bond-st",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/B4.png"
+    }
+  },
+  {
+    "detectedAt": "2026-08-21T18:38:01.928Z",
+    "unitId": "C-204",
+    "type": "price_decrease",
+    "oldValue": 4403,
+    "newValue": 4303
+  },
+  {
+    "detectedAt": "2026-08-21T18:38:01.928Z",
+    "unitId": "C-226",
+    "type": "price_decrease",
+    "oldValue": 4473,
+    "newValue": 4372
+  },
+  {
+    "detectedAt": "2026-08-21T18:38:01.928Z",
+    "unitId": "C-522",
+    "type": "price_decrease",
+    "oldValue": 4548,
+    "newValue": 4448
+  },
+  {
+    "detectedAt": "2026-08-21T18:38:01.928Z",
+    "unitId": "C-626",
+    "type": "price_decrease",
+    "oldValue": 4603,
+    "newValue": 4503
+  },
+  {
     "detectedAt": "2026-08-21T15:35:19.844Z",
     "unitId": "D-215",
     "type": "price_decrease",
