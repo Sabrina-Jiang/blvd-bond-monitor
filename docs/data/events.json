@@ -1,5 +1,57 @@
 [
   {
+    "detectedAt": "2026-08-22T21:22:50.669Z",
+    "unitId": "D-503",
+    "type": "removed_unit",
+    "oldValue": {
+      "unitId": "D-503",
+      "externalUnitId": "28675331",
+      "address": "66 bond st",
+      "typeLine": "1BR - 1 BA - 1015 sqft",
+      "bedrooms": "1BR",
+      "floorplanName": "1 Bed/1 Bath Den - AD6 Bldg D",
+      "sqft": 1015,
+      "price": 3952,
+      "available": "09/22/2026",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=28675331&FloorPlanID=3580882&myOlePropertyid=1319715&MoveInDate=2026-09-22",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/D-503-bldg-66-bond-st",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/2/8131/AD6 - D.jpg",
+      "firstSeenAt": "2026-08-16T00:30:25.178Z",
+      "lastSeenAt": "2026-08-22T20:24:32.717Z",
+      "priceHistory": [
+        {
+          "price": 3860,
+          "at": "2026-08-16T00:30:25.178Z"
+        },
+        {
+          "price": 3901,
+          "at": "2026-08-17T23:24:30.402Z"
+        },
+        {
+          "price": 3952,
+          "at": "2026-08-18T23:23:38.669Z"
+        },
+        {
+          "price": 3952,
+          "at": "2026-08-19T23:23:51.407Z"
+        },
+        {
+          "price": 3952,
+          "at": "2026-08-20T23:26:46.792Z"
+        },
+        {
+          "price": 3952,
+          "at": "2026-08-21T23:25:10.211Z"
+        },
+        {
+          "price": 3952,
+          "at": "2026-08-22T20:24:32.717Z"
+        }
+      ]
+    },
+    "newValue": null
+  },
+  {
     "detectedAt": "2026-08-22T15:22:14.356Z",
     "unitId": "D-215",
     "type": "price_decrease",
