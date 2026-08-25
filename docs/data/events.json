@@ -1,5 +1,53 @@
 [
   {
+    "detectedAt": "2026-08-25T14:47:27.067Z",
+    "unitId": "D-516",
+    "type": "price_decrease",
+    "oldValue": 3033,
+    "newValue": 3024
+  },
+  {
+    "detectedAt": "2026-08-25T14:47:27.067Z",
+    "unitId": "C-401",
+    "type": "price_decrease",
+    "oldValue": 3542,
+    "newValue": 3533
+  },
+  {
+    "detectedAt": "2026-08-25T14:47:27.067Z",
+    "unitId": "D-306",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "D-306",
+      "externalUnitId": "28675288",
+      "address": "66 bond st",
+      "typeLine": "1BR - 1 BA - 894 sqft",
+      "bedrooms": "1BR",
+      "floorplanName": "1 Bed/1 Bath - A8 Bldg D",
+      "sqft": 894,
+      "price": 3768,
+      "available": "09/28/2026",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=28675288&FloorPlanID=3580880&myOlePropertyid=1319715&MoveInDate=2026-09-28",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/D-306-bldg-66-bond-st",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/MA _Watertown_BlvdBondBuildingD_p1292670_BlvdBondA8894_2_FloorPlan.png"
+    }
+  },
+  {
+    "detectedAt": "2026-08-25T14:47:27.067Z",
+    "unitId": "C-423",
+    "type": "price_decrease",
+    "oldValue": 3784,
+    "newValue": 3774
+  },
+  {
+    "detectedAt": "2026-08-25T14:47:27.067Z",
+    "unitId": "C-204",
+    "type": "price_decrease",
+    "oldValue": 4360,
+    "newValue": 4303
+  },
+  {
     "detectedAt": "2026-08-25T07:44:35.904Z",
     "unitId": "C-615",
     "type": "removed_unit",
