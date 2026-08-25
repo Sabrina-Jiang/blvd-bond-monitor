@@ -1,5 +1,69 @@
 [
   {
+    "detectedAt": "2026-08-25T07:44:35.904Z",
+    "unitId": "C-615",
+    "type": "removed_unit",
+    "oldValue": {
+      "unitId": "C-615",
+      "externalUnitId": "29811177",
+      "address": "22 bond st",
+      "typeLine": "1BR - 1 BA - 785 sqft",
+      "bedrooms": "1BR",
+      "floorplanName": "1 Bed/1 Bath - A1 Bldg C",
+      "sqft": 785,
+      "price": 3647,
+      "available": "08/31/2026",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=29811177&FloorPlanID=4005733&myOlePropertyid=1319715&MoveInDate=2026-08-31",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-615-bldg-22-bond-st",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/A1.png",
+      "firstSeenAt": "2026-08-16T00:30:25.178Z",
+      "lastSeenAt": "2026-08-25T06:51:07.006Z",
+      "priceHistory": [
+        {
+          "price": 3466,
+          "at": "2026-08-16T00:30:25.178Z"
+        },
+        {
+          "price": 3507,
+          "at": "2026-08-17T23:24:30.402Z"
+        },
+        {
+          "price": 3547,
+          "at": "2026-08-18T23:23:38.669Z"
+        },
+        {
+          "price": 3547,
+          "at": "2026-08-19T23:23:51.407Z"
+        },
+        {
+          "price": 3547,
+          "at": "2026-08-20T23:26:46.792Z"
+        },
+        {
+          "price": 3547,
+          "at": "2026-08-21T23:25:10.211Z"
+        },
+        {
+          "price": 3547,
+          "at": "2026-08-22T23:21:51.332Z"
+        },
+        {
+          "price": 3547,
+          "at": "2026-08-23T23:22:14.414Z"
+        },
+        {
+          "price": 3647,
+          "at": "2026-08-24T23:23:34.116Z"
+        },
+        {
+          "price": 3647,
+          "at": "2026-08-25T06:51:07.006Z"
+        }
+      ]
+    },
+    "newValue": null
+  },
+  {
     "detectedAt": "2026-08-24T18:41:54.596Z",
     "unitId": "D-510",
     "type": "price_increase",
