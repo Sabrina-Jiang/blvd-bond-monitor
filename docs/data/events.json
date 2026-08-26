@@ -1,5 +1,77 @@
 [
   {
+    "detectedAt": "2026-08-26T07:48:18.183Z",
+    "unitId": "D-215",
+    "type": "removed_unit",
+    "oldValue": {
+      "unitId": "D-215",
+      "externalUnitId": "28675274",
+      "address": "66 bond st",
+      "typeLine": "Studio - 1 BA - 641 sqft",
+      "bedrooms": "Studio",
+      "floorplanName": "Studio - S1 Bldg D",
+      "sqft": 641,
+      "price": 2787,
+      "available": "Now",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=28675274&FloorPlanID=3580889&myOlePropertyid=1319715&MoveInDate=2026-08-26",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/D-215-bldg-66-bond-st/",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/MA _Watertown_BlvdBondBuildingD_p1292670_BlvdBondS1631687_2_FloorPlan.png",
+      "firstSeenAt": "2026-08-16T00:30:25.178Z",
+      "lastSeenAt": "2026-08-26T06:52:05.786Z",
+      "priceHistory": [
+        {
+          "price": 3208,
+          "at": "2026-08-16T00:30:25.178Z"
+        },
+        {
+          "price": 3198,
+          "at": "2026-08-16T15:22:59.588Z"
+        },
+        {
+          "price": 3164,
+          "at": "2026-08-17T23:24:30.402Z"
+        },
+        {
+          "price": 2937,
+          "at": "2026-08-18T23:23:38.669Z"
+        },
+        {
+          "price": 2859,
+          "at": "2026-08-19T23:23:51.407Z"
+        },
+        {
+          "price": 2802,
+          "at": "2026-08-20T23:26:46.792Z"
+        },
+        {
+          "price": 2794,
+          "at": "2026-08-21T23:25:10.211Z"
+        },
+        {
+          "price": 2787,
+          "at": "2026-08-22T23:21:51.332Z"
+        },
+        {
+          "price": 2787,
+          "at": "2026-08-23T23:22:14.414Z"
+        },
+        {
+          "price": 2787,
+          "at": "2026-08-24T23:23:34.116Z"
+        },
+        {
+          "price": 2787,
+          "at": "2026-08-25T23:25:43.909Z"
+        },
+        {
+          "price": 2787,
+          "at": "2026-08-26T06:52:05.786Z"
+        }
+      ]
+    },
+    "newValue": null
+  },
+  {
     "detectedAt": "2026-08-25T18:40:59.658Z",
     "unitId": "D-510",
     "type": "price_increase",
