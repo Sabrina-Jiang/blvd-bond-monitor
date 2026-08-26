@@ -1,5 +1,26 @@
 [
   {
+    "detectedAt": "2026-08-26T14:48:10.174Z",
+    "unitId": "D-516",
+    "type": "price_decrease",
+    "oldValue": 3024,
+    "newValue": 3015
+  },
+  {
+    "detectedAt": "2026-08-26T14:48:10.174Z",
+    "unitId": "C-401",
+    "type": "price_decrease",
+    "oldValue": 3577,
+    "newValue": 3572
+  },
+  {
+    "detectedAt": "2026-08-26T14:48:10.174Z",
+    "unitId": "C-423",
+    "type": "price_decrease",
+    "oldValue": 3819,
+    "newValue": 3818
+  },
+  {
     "detectedAt": "2026-08-26T07:48:18.183Z",
     "unitId": "D-215",
     "type": "removed_unit",
