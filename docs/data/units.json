@@ -13,7 +13,7 @@
     "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/D-213-bldg-66-bond-st/",
     "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/MA _Watertown_BlvdBondBuildingD_p1292670_BlvdBondS1631687_2_FloorPlan.png",
     "firstSeenAt": "2026-08-16T00:30:25.178Z",
-    "lastSeenAt": "2026-08-26T19:04:45.641Z",
+    "lastSeenAt": "2026-08-26T22:50:06.998Z",
     "priceHistory": [
       {
         "price": 3322,
@@ -57,7 +57,29 @@
       },
       {
         "price": 2948,
-        "at": "2026-08-26T19:04:45.641Z"
+        "at": "2026-08-26T22:50:06.998Z"
+      }
+    ]
+  },
+  {
+    "unitId": "D-417",
+    "externalUnitId": "28675322",
+    "address": "66 bond st",
+    "typeLine": "Studio - 1 BA - 641 sqft",
+    "bedrooms": "Studio",
+    "floorplanName": "Studio - S1 Bldg D",
+    "sqft": 641,
+    "price": 2968,
+    "available": "11/21/2026",
+    "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=28675322&FloorPlanID=3580889&myOlePropertyid=1319715&MoveInDate=2026-11-21",
+    "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/D-417-bldg-66-bond-st/",
+    "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/MA _Watertown_BlvdBondBuildingD_p1292670_BlvdBondS1631687_2_FloorPlan.png",
+    "firstSeenAt": "2026-08-26T22:50:06.998Z",
+    "lastSeenAt": "2026-08-26T22:50:06.998Z",
+    "priceHistory": [
+      {
+        "price": 2968,
+        "at": "2026-08-26T22:50:06.998Z"
       }
     ]
   },
@@ -75,7 +97,7 @@
     "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-209-bldg-22-bond-st/",
     "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/S2.png",
     "firstSeenAt": "2026-08-19T19:27:08.889Z",
-    "lastSeenAt": "2026-08-26T19:04:45.641Z",
+    "lastSeenAt": "2026-08-26T22:50:06.998Z",
     "priceHistory": [
       {
         "price": 3100,
@@ -107,7 +129,7 @@
       },
       {
         "price": 3013,
-        "at": "2026-08-26T19:04:45.641Z"
+        "at": "2026-08-26T22:50:06.998Z"
       }
     ]
   },
@@ -125,7 +147,7 @@
     "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/D-516-bldg-66-bond-st/",
     "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/MA _Watertown_BlvdBondBuildingD_p1292670_BlvdBondS1631687_2_FloorPlan.png",
     "firstSeenAt": "2026-08-16T00:30:25.178Z",
-    "lastSeenAt": "2026-08-26T19:04:45.641Z",
+    "lastSeenAt": "2026-08-26T22:50:06.998Z",
     "priceHistory": [
       {
         "price": 3428,
@@ -169,7 +191,7 @@
       },
       {
         "price": 3015,
-        "at": "2026-08-26T19:04:45.641Z"
+        "at": "2026-08-26T22:50:06.998Z"
       }
     ]
   },
@@ -187,7 +209,7 @@
     "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-307-bldg-22-bond-st/",
     "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/S2.png",
     "firstSeenAt": "2026-08-16T00:30:25.178Z",
-    "lastSeenAt": "2026-08-26T19:04:45.641Z",
+    "lastSeenAt": "2026-08-26T22:50:06.998Z",
     "priceHistory": [
       {
         "price": 3392,
@@ -231,7 +253,7 @@
       },
       {
         "price": 3018,
-        "at": "2026-08-26T19:04:45.641Z"
+        "at": "2026-08-26T22:50:06.998Z"
       }
     ]
   },
@@ -249,7 +271,7 @@
     "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-507-bldg-22-bond-st/",
     "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/S2.png",
     "firstSeenAt": "2026-08-16T00:30:25.178Z",
-    "lastSeenAt": "2026-08-26T19:04:45.641Z",
+    "lastSeenAt": "2026-08-26T22:50:06.998Z",
     "priceHistory": [
       {
         "price": 3433,
@@ -293,7 +315,7 @@
       },
       {
         "price": 3056,
-        "at": "2026-08-26T19:04:45.641Z"
+        "at": "2026-08-26T22:50:06.998Z"
       }
     ]
   },
@@ -311,7 +333,7 @@
     "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/D-510-bldg-66-bond-st/",
     "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/MA _Watertown_BlvdBondBuildingD_p1292670_BlvdBondA7701_2_FloorPlan.png",
     "firstSeenAt": "2026-08-16T00:30:25.178Z",
-    "lastSeenAt": "2026-08-26T19:04:45.641Z",
+    "lastSeenAt": "2026-08-26T22:50:06.998Z",
     "priceHistory": [
       {
         "price": 3275,
@@ -355,7 +377,7 @@
       },
       {
         "price": 3519,
-        "at": "2026-08-26T19:04:45.641Z"
+        "at": "2026-08-26T22:50:06.998Z"
       }
     ]
   },
@@ -373,7 +395,7 @@
     "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/D-212-bldg-66-bond-st/",
     "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/MA _Watertown_BlvdBondBuildingD_p1292670_BlvdBondA7701_2_FloorPlan.png",
     "firstSeenAt": "2026-08-16T00:30:25.178Z",
-    "lastSeenAt": "2026-08-26T19:04:45.641Z",
+    "lastSeenAt": "2026-08-26T22:50:06.998Z",
     "priceHistory": [
       {
         "price": 3363,
@@ -417,7 +439,7 @@
       },
       {
         "price": 3610,
-        "at": "2026-08-26T19:04:45.641Z"
+        "at": "2026-08-26T22:50:06.998Z"
       }
     ]
   },
@@ -435,7 +457,7 @@
     "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-401-bldg-22-bond-st/",
     "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/A4.png",
     "firstSeenAt": "2026-08-16T00:30:25.178Z",
-    "lastSeenAt": "2026-08-26T19:04:45.641Z",
+    "lastSeenAt": "2026-08-26T22:50:06.998Z",
     "priceHistory": [
       {
         "price": 3430,
@@ -479,7 +501,7 @@
       },
       {
         "price": 3616,
-        "at": "2026-08-26T19:04:45.641Z"
+        "at": "2026-08-26T22:50:06.998Z"
       }
     ]
   },
@@ -494,10 +516,10 @@
     "price": 3725,
     "available": "09/14/2026",
     "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=29811127&FloorPlanID=4005733&myOlePropertyid=1319715&MoveInDate=2026-09-14",
-    "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-417-bldg-22-bond-st/",
+    "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-417-bldg-22-bond-st",
     "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/A1.png",
     "firstSeenAt": "2026-08-16T00:30:25.178Z",
-    "lastSeenAt": "2026-08-26T19:04:45.641Z",
+    "lastSeenAt": "2026-08-26T22:50:06.998Z",
     "priceHistory": [
       {
         "price": 3446,
@@ -541,7 +563,7 @@
       },
       {
         "price": 3725,
-        "at": "2026-08-26T19:04:45.641Z"
+        "at": "2026-08-26T22:50:06.998Z"
       }
     ]
   },
@@ -559,7 +581,7 @@
     "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/D-306-bldg-66-bond-st",
     "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/MA _Watertown_BlvdBondBuildingD_p1292670_BlvdBondA8894_2_FloorPlan.png",
     "firstSeenAt": "2026-08-25T14:47:27.067Z",
-    "lastSeenAt": "2026-08-26T19:04:45.641Z",
+    "lastSeenAt": "2026-08-26T22:50:06.998Z",
     "priceHistory": [
       {
         "price": 3814,
@@ -567,7 +589,7 @@
       },
       {
         "price": 3858,
-        "at": "2026-08-26T19:04:45.641Z"
+        "at": "2026-08-26T22:50:06.998Z"
       }
     ]
   },
@@ -585,7 +607,7 @@
     "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-423-bldg-22-bond-st",
     "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/A3.png",
     "firstSeenAt": "2026-08-16T00:30:25.178Z",
-    "lastSeenAt": "2026-08-26T19:04:45.641Z",
+    "lastSeenAt": "2026-08-26T22:50:06.998Z",
     "priceHistory": [
       {
         "price": 3667,
@@ -629,7 +651,7 @@
       },
       {
         "price": 3862,
-        "at": "2026-08-26T19:04:45.641Z"
+        "at": "2026-08-26T22:50:06.998Z"
       }
     ]
   },
@@ -647,7 +669,7 @@
     "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-608-bldg-22-bond-st",
     "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/B6.png",
     "firstSeenAt": "2026-08-16T00:30:25.178Z",
-    "lastSeenAt": "2026-08-26T19:04:45.641Z",
+    "lastSeenAt": "2026-08-26T22:50:06.998Z",
     "priceHistory": [
       {
         "price": 3996,
@@ -691,7 +713,7 @@
       },
       {
         "price": 4213,
-        "at": "2026-08-26T19:04:45.641Z"
+        "at": "2026-08-26T22:50:06.998Z"
       }
     ]
   },
@@ -709,7 +731,7 @@
     "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-205-bldg-22-bond-st",
     "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/B4.png",
     "firstSeenAt": "2026-08-21T18:38:01.928Z",
-    "lastSeenAt": "2026-08-26T19:04:45.641Z",
+    "lastSeenAt": "2026-08-26T22:50:06.998Z",
     "priceHistory": [
       {
         "price": 4222,
@@ -733,7 +755,7 @@
       },
       {
         "price": 4222,
-        "at": "2026-08-26T19:04:45.641Z"
+        "at": "2026-08-26T22:50:06.998Z"
       }
     ]
   },
@@ -751,7 +773,7 @@
     "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-204-bldg-22-bond-st",
     "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/B1.png",
     "firstSeenAt": "2026-08-16T00:30:25.178Z",
-    "lastSeenAt": "2026-08-26T19:04:45.641Z",
+    "lastSeenAt": "2026-08-26T22:50:06.998Z",
     "priceHistory": [
       {
         "price": 4313,
@@ -795,7 +817,7 @@
       },
       {
         "price": 4303,
-        "at": "2026-08-26T19:04:45.641Z"
+        "at": "2026-08-26T22:50:06.998Z"
       }
     ]
   },
@@ -813,7 +835,7 @@
     "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-226-bldg-22-bond-st",
     "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/Blvd Bond_B2_1166.png",
     "firstSeenAt": "2026-08-16T00:30:25.178Z",
-    "lastSeenAt": "2026-08-26T19:04:45.641Z",
+    "lastSeenAt": "2026-08-26T22:50:06.998Z",
     "priceHistory": [
       {
         "price": 4382,
@@ -857,7 +879,7 @@
       },
       {
         "price": 4372,
-        "at": "2026-08-26T19:04:45.641Z"
+        "at": "2026-08-26T22:50:06.998Z"
       }
     ]
   },
@@ -875,7 +897,7 @@
     "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-522-bldg-22-bond-st",
     "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/Blvd Bond_B3_1123.png",
     "firstSeenAt": "2026-08-16T00:30:25.178Z",
-    "lastSeenAt": "2026-08-26T19:04:45.641Z",
+    "lastSeenAt": "2026-08-26T22:50:06.998Z",
     "priceHistory": [
       {
         "price": 4458,
@@ -919,7 +941,7 @@
       },
       {
         "price": 4448,
-        "at": "2026-08-26T19:04:45.641Z"
+        "at": "2026-08-26T22:50:06.998Z"
       }
     ]
   },
@@ -937,7 +959,7 @@
     "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-626-bldg-22-bond-st",
     "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/Blvd Bond_B2_1166.png",
     "firstSeenAt": "2026-08-17T18:41:25.619Z",
-    "lastSeenAt": "2026-08-26T19:04:45.641Z",
+    "lastSeenAt": "2026-08-26T22:50:06.998Z",
     "priceHistory": [
       {
         "price": 4583,
@@ -977,7 +999,7 @@
       },
       {
         "price": 4503,
-        "at": "2026-08-26T19:04:45.641Z"
+        "at": "2026-08-26T22:50:06.998Z"
       }
     ]
   }

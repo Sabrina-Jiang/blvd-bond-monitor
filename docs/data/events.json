@@ -1,5 +1,25 @@
 [
   {
+    "detectedAt": "2026-08-26T22:50:06.998Z",
+    "unitId": "D-417",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "D-417",
+      "externalUnitId": "28675322",
+      "address": "66 bond st",
+      "typeLine": "Studio - 1 BA - 641 sqft",
+      "bedrooms": "Studio",
+      "floorplanName": "Studio - S1 Bldg D",
+      "sqft": 641,
+      "price": 2968,
+      "available": "11/21/2026",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=28675322&FloorPlanID=3580889&myOlePropertyid=1319715&MoveInDate=2026-11-21",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/D-417-bldg-66-bond-st/",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/MA _Watertown_BlvdBondBuildingD_p1292670_BlvdBondS1631687_2_FloorPlan.png"
+    }
+  },
+  {
     "detectedAt": "2026-08-26T19:04:45.641Z",
     "unitId": "D-510",
     "type": "price_increase",
