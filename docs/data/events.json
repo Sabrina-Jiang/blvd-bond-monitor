@@ -1,5 +1,89 @@
 [
   {
+    "detectedAt": "2026-08-28T01:19:31.637Z",
+    "unitId": "D-213",
+    "type": "price_decrease",
+    "oldValue": 2948,
+    "newValue": 2898
+  },
+  {
+    "detectedAt": "2026-08-28T01:19:31.637Z",
+    "unitId": "D-417",
+    "type": "price_decrease",
+    "oldValue": 2968,
+    "newValue": 2918
+  },
+  {
+    "detectedAt": "2026-08-28T01:19:31.637Z",
+    "unitId": "D-516",
+    "type": "price_decrease",
+    "oldValue": 3005,
+    "newValue": 2956
+  },
+  {
+    "detectedAt": "2026-08-28T01:19:31.637Z",
+    "unitId": "C-209",
+    "type": "price_decrease",
+    "oldValue": 3013,
+    "newValue": 2963
+  },
+  {
+    "detectedAt": "2026-08-28T01:19:31.637Z",
+    "unitId": "C-307",
+    "type": "price_decrease",
+    "oldValue": 3018,
+    "newValue": 2968
+  },
+  {
+    "detectedAt": "2026-08-28T01:19:31.637Z",
+    "unitId": "C-507",
+    "type": "price_decrease",
+    "oldValue": 3047,
+    "newValue": 2997
+  },
+  {
+    "detectedAt": "2026-08-28T01:19:31.637Z",
+    "unitId": "D-510",
+    "type": "price_increase",
+    "oldValue": 3519,
+    "newValue": 3563
+  },
+  {
+    "detectedAt": "2026-08-28T01:19:31.637Z",
+    "unitId": "C-401",
+    "type": "price_increase",
+    "oldValue": 3603,
+    "newValue": 3646
+  },
+  {
+    "detectedAt": "2026-08-28T01:19:31.637Z",
+    "unitId": "D-212",
+    "type": "price_increase",
+    "oldValue": 3610,
+    "newValue": 3654
+  },
+  {
+    "detectedAt": "2026-08-28T01:19:31.637Z",
+    "unitId": "C-417",
+    "type": "price_increase",
+    "oldValue": 3725,
+    "newValue": 3770
+  },
+  {
+    "detectedAt": "2026-08-28T01:19:31.637Z",
+    "unitId": "C-423",
+    "type": "price_increase",
+    "oldValue": 3849,
+    "newValue": 3893
+  },
+  {
+    "detectedAt": "2026-08-28T01:19:31.637Z",
+    "unitId": "D-306",
+    "type": "price_increase",
+    "oldValue": 3858,
+    "newValue": 3903
+  },
+  {
     "detectedAt": "2026-08-27T16:10:56.881Z",
     "unitId": "D-516",
     "type": "price_decrease",
