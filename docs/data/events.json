@@ -1,5 +1,12 @@
 [
   {
+    "detectedAt": "2026-08-29T06:06:15.256Z",
+    "unitId": "C-204",
+    "type": "availability_change",
+    "oldValue": "08/29/2026",
+    "newValue": "Now"
+  },
+  {
     "detectedAt": "2026-08-28T23:28:14.287Z",
     "unitId": "D-516",
     "type": "price_decrease",
