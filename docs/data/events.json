@@ -1,5 +1,151 @@
 [
   {
+    "detectedAt": "2026-08-31T21:45:50.896Z",
+    "unitId": "D-215",
+    "type": "price_decrease",
+    "oldValue": 2730,
+    "newValue": 2683
+  },
+  {
+    "detectedAt": "2026-08-31T21:45:50.896Z",
+    "unitId": "D-213",
+    "type": "price_decrease",
+    "oldValue": 2898,
+    "newValue": 2848
+  },
+  {
+    "detectedAt": "2026-08-31T21:45:50.896Z",
+    "unitId": "D-516",
+    "type": "price_decrease",
+    "oldValue": 2898,
+    "newValue": 2850
+  },
+  {
+    "detectedAt": "2026-08-31T21:45:50.896Z",
+    "unitId": "D-417",
+    "type": "price_decrease",
+    "oldValue": 2918,
+    "newValue": 2868
+  },
+  {
+    "detectedAt": "2026-08-31T21:45:50.896Z",
+    "unitId": "C-507",
+    "type": "price_decrease",
+    "oldValue": 2944,
+    "newValue": 2895
+  },
+  {
+    "detectedAt": "2026-08-31T21:45:50.896Z",
+    "unitId": "C-209",
+    "type": "price_decrease",
+    "oldValue": 2963,
+    "newValue": 2913
+  },
+  {
+    "detectedAt": "2026-08-31T21:45:50.896Z",
+    "unitId": "C-307",
+    "type": "price_decrease",
+    "oldValue": 2968,
+    "newValue": 2918
+  },
+  {
+    "detectedAt": "2026-08-31T21:45:50.896Z",
+    "unitId": "D-510",
+    "type": "price_increase",
+    "oldValue": 3570,
+    "newValue": 3577
+  },
+  {
+    "detectedAt": "2026-08-31T21:45:50.896Z",
+    "unitId": "C-401",
+    "type": "price_increase",
+    "oldValue": 3602,
+    "newValue": 3609
+  },
+  {
+    "detectedAt": "2026-08-31T21:45:50.896Z",
+    "unitId": "D-212",
+    "type": "price_increase",
+    "oldValue": 3661,
+    "newValue": 3668
+  },
+  {
+    "detectedAt": "2026-08-31T21:45:50.896Z",
+    "unitId": "C-514",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "C-514",
+      "externalUnitId": "29811151",
+      "address": "22 bond st",
+      "typeLine": "1BR - 1 BA - 785 sqft",
+      "bedrooms": "1BR",
+      "floorplanName": "1 Bed/1 Bath - A1 Bldg C",
+      "sqft": 785,
+      "price": 3708,
+      "available": "11/07/2026",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=29811151&FloorPlanID=4005733&myOlePropertyid=1319715&MoveInDate=2026-11-07",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/C-514-bldg-22-bond-st",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/A1.png"
+    }
+  },
+  {
+    "detectedAt": "2026-08-31T21:45:50.896Z",
+    "unitId": "C-417",
+    "type": "price_increase",
+    "oldValue": 3777,
+    "newValue": 3784
+  },
+  {
+    "detectedAt": "2026-08-31T21:45:50.896Z",
+    "unitId": "C-423",
+    "type": "price_increase",
+    "oldValue": 3845,
+    "newValue": 3852
+  },
+  {
+    "detectedAt": "2026-08-31T21:45:50.896Z",
+    "unitId": "D-306",
+    "type": "price_increase",
+    "oldValue": 3910,
+    "newValue": 3917
+  },
+  {
+    "detectedAt": "2026-08-31T21:45:50.896Z",
+    "unitId": "C-608",
+    "type": "price_increase",
+    "oldValue": 4154,
+    "newValue": 4251
+  },
+  {
+    "detectedAt": "2026-08-31T21:45:50.896Z",
+    "unitId": "C-205",
+    "type": "price_increase",
+    "oldValue": 4222,
+    "newValue": 4322
+  },
+  {
+    "detectedAt": "2026-08-31T21:45:50.896Z",
+    "unitId": "C-204",
+    "type": "price_increase",
+    "oldValue": 4303,
+    "newValue": 4403
+  },
+  {
+    "detectedAt": "2026-08-31T21:45:50.896Z",
+    "unitId": "C-226",
+    "type": "price_increase",
+    "oldValue": 4372,
+    "newValue": 4473
+  },
+  {
+    "detectedAt": "2026-08-31T21:45:50.896Z",
+    "unitId": "C-522",
+    "type": "price_increase",
+    "oldValue": 4448,
+    "newValue": 4548
+  },
+  {
     "detectedAt": "2026-08-31T16:48:11.498Z",
     "unitId": "D-516",
     "type": "price_decrease",
