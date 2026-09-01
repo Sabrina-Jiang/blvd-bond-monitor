@@ -1,5 +1,33 @@
 [
   {
+    "detectedAt": "2026-09-01T17:40:28.631Z",
+    "unitId": "D-516",
+    "type": "price_decrease",
+    "oldValue": 2850,
+    "newValue": 2839
+  },
+  {
+    "detectedAt": "2026-09-01T17:40:28.631Z",
+    "unitId": "C-507",
+    "type": "price_decrease",
+    "oldValue": 2895,
+    "newValue": 2885
+  },
+  {
+    "detectedAt": "2026-09-01T17:40:28.631Z",
+    "unitId": "C-401",
+    "type": "price_decrease",
+    "oldValue": 3609,
+    "newValue": 3596
+  },
+  {
+    "detectedAt": "2026-09-01T17:40:28.631Z",
+    "unitId": "C-423",
+    "type": "price_decrease",
+    "oldValue": 3852,
+    "newValue": 3838
+  },
+  {
     "detectedAt": "2026-08-31T21:45:50.896Z",
     "unitId": "D-215",
     "type": "price_decrease",
