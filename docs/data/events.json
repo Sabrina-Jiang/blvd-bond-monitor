@@ -1,5 +1,19 @@
 [
   {
+    "detectedAt": "2026-09-02T13:21:21.358Z",
+    "unitId": "C-401",
+    "type": "price_increase",
+    "oldValue": 3596,
+    "newValue": 3629
+  },
+  {
+    "detectedAt": "2026-09-02T13:21:21.358Z",
+    "unitId": "C-423",
+    "type": "price_increase",
+    "oldValue": 3838,
+    "newValue": 3873
+  },
+  {
     "detectedAt": "2026-09-01T17:40:28.631Z",
     "unitId": "D-516",
     "type": "price_decrease",
