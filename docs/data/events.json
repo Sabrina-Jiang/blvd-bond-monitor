@@ -1,5 +1,60 @@
 [
   {
+    "detectedAt": "2026-09-03T17:36:18.083Z",
+    "unitId": "D-516",
+    "type": "price_decrease",
+    "oldValue": 2781,
+    "newValue": 2771
+  },
+  {
+    "detectedAt": "2026-09-03T17:36:18.083Z",
+    "unitId": "C-507",
+    "type": "price_decrease",
+    "oldValue": 2826,
+    "newValue": 2816
+  },
+  {
+    "detectedAt": "2026-09-03T17:36:18.083Z",
+    "unitId": "C-401",
+    "type": "price_decrease",
+    "oldValue": 3606,
+    "newValue": 3594
+  },
+  {
+    "detectedAt": "2026-09-03T17:36:18.083Z",
+    "unitId": "C-423",
+    "type": "price_decrease",
+    "oldValue": 3847,
+    "newValue": 3834
+  },
+  {
+    "detectedAt": "2026-09-03T17:36:18.083Z",
+    "unitId": "F-724",
+    "type": "new_unit",
+    "oldValue": null,
+    "newValue": {
+      "unitId": "F-724",
+      "externalUnitId": "28675259",
+      "address": "88 Arsenal Yards Blvd",
+      "typeLine": "1BR - 1 BA - 836 sqft",
+      "bedrooms": "1BR",
+      "floorplanName": "1 Bed/1 Bath - A8 Bldg F",
+      "sqft": 836,
+      "price": 3848,
+      "available": "11/01/2026",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=28675259&FloorPlanID=3580901&myOlePropertyid=1319715&MoveInDate=2026-11-01",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/F-724-bldg-88-Arsenal-Yards-Blvd",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/MA _Watertown_BlvdBondBuildingF_p1292668_BlvdBondA8836_2_FloorPlan.png"
+    }
+  },
+  {
+    "detectedAt": "2026-09-03T17:36:18.083Z",
+    "unitId": "C-522",
+    "type": "price_decrease",
+    "oldValue": 4626,
+    "newValue": 4458
+  },
+  {
     "detectedAt": "2026-09-03T08:39:40.802Z",
     "unitId": "D-213",
     "type": "availability_change",
