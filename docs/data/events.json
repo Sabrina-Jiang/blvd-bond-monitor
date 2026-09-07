@@ -1,5 +1,69 @@
 [
   {
+    "detectedAt": "2026-09-07T09:02:50.522Z",
+    "unitId": "D-215",
+    "type": "removed_unit",
+    "oldValue": {
+      "unitId": "D-215",
+      "externalUnitId": "28675274",
+      "address": "66 bond st",
+      "typeLine": "Studio - 1 BA - 641 sqft",
+      "bedrooms": "Studio",
+      "floorplanName": "Studio - S1 Bldg D",
+      "sqft": 641,
+      "price": 2565,
+      "available": "Now",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=28675274&FloorPlanID=3580889&myOlePropertyid=1319715&MoveInDate=2026-09-06",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/D-215-bldg-66-bond-st/",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/MA _Watertown_BlvdBondBuildingD_p1292670_BlvdBondS1631687_2_FloorPlan.png",
+      "firstSeenAt": "2026-08-29T20:34:10.567Z",
+      "lastSeenAt": "2026-09-07T03:27:43.435Z",
+      "priceHistory": [
+        {
+          "price": 2787,
+          "at": "2026-08-29T23:02:15.594Z"
+        },
+        {
+          "price": 2730,
+          "at": "2026-08-30T22:28:19.416Z"
+        },
+        {
+          "price": 2683,
+          "at": "2026-08-31T21:45:50.896Z"
+        },
+        {
+          "price": 2683,
+          "at": "2026-09-01T23:05:46.842Z"
+        },
+        {
+          "price": 2635,
+          "at": "2026-09-02T23:03:42.674Z"
+        },
+        {
+          "price": 2635,
+          "at": "2026-09-03T23:08:44.407Z"
+        },
+        {
+          "price": 2577,
+          "at": "2026-09-04T22:50:12.958Z"
+        },
+        {
+          "price": 2577,
+          "at": "2026-09-05T22:47:01.274Z"
+        },
+        {
+          "price": 2565,
+          "at": "2026-09-06T23:34:37.625Z"
+        },
+        {
+          "price": 2565,
+          "at": "2026-09-07T03:27:43.435Z"
+        }
+      ]
+    },
+    "newValue": null
+  },
+  {
     "detectedAt": "2026-09-06T16:55:19.387Z",
     "unitId": "D-215",
     "type": "price_decrease",
