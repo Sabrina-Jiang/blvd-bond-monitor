@@ -1,5 +1,125 @@
 [
   {
+    "detectedAt": "2026-09-08T18:29:45.466Z",
+    "unitId": "D-516",
+    "type": "removed_unit",
+    "oldValue": {
+      "unitId": "D-516",
+      "externalUnitId": "28675344",
+      "address": "66 bond st",
+      "typeLine": "Studio - 1 BA - 641 sqft",
+      "bedrooms": "Studio",
+      "floorplanName": "Studio - S1 Bldg D",
+      "sqft": 641,
+      "price": 2708,
+      "available": "Now",
+      "applyUrl": "https://blvdbond.securecafe.com/onlineleasing/blvd-bond/rentaloptions.aspx?UnitID=28675344&FloorPlanID=3580889&myOlePropertyid=1319715&MoveInDate=2026-09-08",
+      "detailUrl": "https://www.blvdbond.com/floor-plans/apartment/D-516-bldg-66-bond-st/",
+      "imageUrl": "https://cdngeneralcf.rentcafe.com/dmslivecafe/3/1319715/MA _Watertown_BlvdBondBuildingD_p1292670_BlvdBondS1631687_2_FloorPlan.png",
+      "firstSeenAt": "2026-08-16T00:30:25.178Z",
+      "lastSeenAt": "2026-09-08T14:57:52.874Z",
+      "priceHistory": [
+        {
+          "price": 3428,
+          "at": "2026-08-16T00:30:25.178Z"
+        },
+        {
+          "price": 3404,
+          "at": "2026-08-17T23:24:30.402Z"
+        },
+        {
+          "price": 3174,
+          "at": "2026-08-18T23:23:38.669Z"
+        },
+        {
+          "price": 3102,
+          "at": "2026-08-19T23:23:51.407Z"
+        },
+        {
+          "price": 3051,
+          "at": "2026-08-20T23:26:46.792Z"
+        },
+        {
+          "price": 3051,
+          "at": "2026-08-21T23:25:10.211Z"
+        },
+        {
+          "price": 3051,
+          "at": "2026-08-22T23:21:51.332Z"
+        },
+        {
+          "price": 3042,
+          "at": "2026-08-23T23:22:14.414Z"
+        },
+        {
+          "price": 3033,
+          "at": "2026-08-24T23:23:34.116Z"
+        },
+        {
+          "price": 3024,
+          "at": "2026-08-25T23:25:43.909Z"
+        },
+        {
+          "price": 3015,
+          "at": "2026-08-26T22:50:06.998Z"
+        },
+        {
+          "price": 3005,
+          "at": "2026-08-27T16:10:56.881Z"
+        },
+        {
+          "price": 2929,
+          "at": "2026-08-28T23:28:14.287Z"
+        },
+        {
+          "price": 2919,
+          "at": "2026-08-29T23:02:15.594Z"
+        },
+        {
+          "price": 2908,
+          "at": "2026-08-30T22:28:19.416Z"
+        },
+        {
+          "price": 2850,
+          "at": "2026-08-31T21:45:50.896Z"
+        },
+        {
+          "price": 2839,
+          "at": "2026-09-01T23:05:46.842Z"
+        },
+        {
+          "price": 2781,
+          "at": "2026-09-02T23:03:42.674Z"
+        },
+        {
+          "price": 2771,
+          "at": "2026-09-03T23:08:44.407Z"
+        },
+        {
+          "price": 2761,
+          "at": "2026-09-04T22:50:12.958Z"
+        },
+        {
+          "price": 2751,
+          "at": "2026-09-05T22:47:01.274Z"
+        },
+        {
+          "price": 2728,
+          "at": "2026-09-06T23:34:37.625Z"
+        },
+        {
+          "price": 2718,
+          "at": "2026-09-07T22:35:55.347Z"
+        },
+        {
+          "price": 2708,
+          "at": "2026-09-08T14:57:52.874Z"
+        }
+      ]
+    },
+    "newValue": null
+  },
+  {
     "detectedAt": "2026-09-08T14:57:52.874Z",
     "unitId": "D-516",
     "type": "price_decrease",
